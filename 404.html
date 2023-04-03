@@ -1,6 +1,14 @@
 <html>
   <head>
     <title>404</title>
+    <script>
+      const re = /(aws-lambda-powertools-python|aws-lambda-powertools-typescript).*/i
+      const path = window.location.pathname
+
+      if (re.test(path)) {
+        window.location = "https://awslabs.github.io#{path}"
+      }
+    </script>
   </head>
   <body>
     <h1>404!</h1>
